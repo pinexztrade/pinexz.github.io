@@ -1,0 +1,229 @@
+<html>
+	<head>
+		
+<title>Tokens listing</title>
+		
+		<script>
+			
+			$(document).ready(function($) {
+				//if page loaded with a hash, smooth scroll to it
+				if (window.location.hash !== '') {
+					scroll_to_hash(window.location.hash);
+				}
+				//bind accordion
+				$('#faqs').find('.accordion-toggle').click(function(){
+					//Expand or collapse this panel
+					$(this).next().slideToggle('fast');
+					//Hide the other panels
+					$(".accordion-content").not($(this).next()).slideUp('fast');
+				});
+				// Add smooth scrolling to nav links
+				$("a.hash").on('click', function(event) {
+					event.preventDefault();
+					scroll_to_hash(this.hash);
+					window.location.hash = this.hash;
+				});
+			});
+			function scroll_to_hash(hash) {
+				if (hash === '#roadmap') {
+					var offsettop = 0;
+				} else {
+					var offsettop = $('a[name="' + hash + '"]').offset().top;
+				}
+				$('html, body').animate({
+					scrollTop: offsettop,
+				}, 1000);
+			}
+		</script>
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				background: #f7f7f7;
+				font-family: Segoe UI;
+				padding: 70px 0;
+			}
+			h1 {
+			  text-align: center;
+			  font-size: 3rem;
+			  font-weight: 200;
+			  margin-bottom: 20px;
+			}
+			h2 {
+				text-align: center;
+				font-size: 2rem;
+				font-weight: 200;
+			}
+			a {
+				text-decoration: none;
+			}
+			
+			img {
+				width: 100%;
+			}
+			.header {
+			    position: fixed;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    text-align: center;
+			    /* position: relative; */
+			    z-index: 9;
+			    background: #FFF;
+			    box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
+			}
+			.header a {
+			    padding: 20px 30px;
+			    display: inline-block;
+			    text-decoration: none;
+			    color: #394b59;
+			}
+			.header a:hover {
+				color: #fe5f2c;
+			}
+			.content {
+				width: 1000px;
+				margin: 0 auto;
+				border:1px solid #E0E0E0;
+				padding:12px;
+				color:#212121;
+				background:#FFF;
+				font-size:15px;
+				line-height:1.45em;
+				box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
+			}
+			/* accordion css */
+			#faqs {
+				width: 1000px;
+				box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
+				margin: 0 auto;
+			}
+			.accordion-toggle,
+			.accordion-content {
+				width: 100%;
+				margin: 0 auto;
+			}
+			.accordion-toggle {
+				cursor: pointer;
+				background:#394b59;
+				padding:12px;
+				cursor:pointer;
+				border-right:1px solid #2d3d4a;
+				border-left:1px solid #2d3d4a;
+				border-bottom:1px solid #2d3d4a;
+				min-height:20px;
+				transition:.25s;
+				font-size:18px;
+				font-weight: normal;
+				line-height: 1.3em;
+				color:#ffffff;
+			}
+			.accordion-content {
+				display: none;
+				border-left:1px solid #E0E0E0;
+				border-right:1px solid #E0E0E0;
+				border-bottom:1px solid #E0E0E0;
+				padding:12px;
+				color:#212121;
+				background:#FFF;
+				font-size:15px;
+				line-height:1.45em;
+			}
+			.accordion-content.open { display: block; }
+			/* timeline css */
+			.timeline .demo-card-wrapper {
+			  position: relative;
+			  margin: auto;
+			}
+			.timeline .demo-card-wrapper::after {
+			  z-index: 1;
+			  content: "";
+			  position: absolute;
+			  top: 0;
+			  bottom: 0;
+			  left: 50%;
+			  border-left: 1px solid rgba(191, 191, 191, 0.4);
+			}
+			.timeline .demo-card {
+			  position: relative;
+			  display: block;
+			  margin: 10px auto;
+			  z-index: 2;
+			  max-width: 1000px;
+			  box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
+			}
+			.timeline .demo-card .head {
+			  position: relative;
+			  display: flex;
+			  align-items: center;
+			  color: #fff;
+			  font-weight: 400;
+			}
+			.timeline .demo-card .head .number-box {
+			  display: inline;
+			  float: left;
+			  margin: 15px;
+			  padding: 10px;
+			  font-size: 35px;
+			  line-height: 35px;
+			  font-weight: 600;
+			  background: rgba(0, 0, 0, 0.17);
+			}
+			.timeline .demo-card .head h2 {
+			  font-size: 24px;
+			  font-weight: inherit;
+			  letter-spacing: 2px;
+			  margin: 0;
+			  padding-bottom: 6px;
+			  line-height: 26px;
+			  text-align: left;
+			}
+			.timeline .demo-card .head h2 span {
+			  display: block;
+			  font-size: 18px;
+			  text-transform: uppercase;
+			  margin: 0;
+			}
+			@media (min-width: 480px) {
+			  .timeline .demo-card .head h2 span {
+			    font-size: 0.8rem;
+			  }
+			}
+			.timeline .demo-card {
+				background: #394b59;
+			}
+			.timeline .demo-card.green {
+				background: #77DD77;
+			}
+		</style>
+</head>
+	
+<body>
+	<div class="header">
+			<a href="https://Pinexz.github.io">Trade</a>
+		        <a href="https://pinexz.github.io/about/#donate">Donate</a>
+	</div>           
+		            <h2>Application form for tokens listing on the Pinexz Exchange</h2>
+		 
+	</div>
+	
+		<div class="content">
+			
+		 Please you need to fill out the form below.
+                 <br>
+                 Listing type:
+			<br>
+                 • Premium - 2 ETH    ( 10-15 business days )
+			<br>
+                 • Exclusive - 5 ETH   ( 2-3 business days )
+			<br>
+			<br>
+			<br>
+                  Send Listing fees on this Address Before 
+			<br>
+			<h3><a href="https://etherscan.io/address/0xB5024CC4238bC82aC801860f280e125231159214"> 0xB5024CC4238bC82aC801860f280e125231159214 </a></h3>
+			<br>
+			 <a class="typeform-share button" href="https://pinexz.typeform.com/to/UgKlLS" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:40px;text-align:center;margin:0;height:40px;padding:0px 26px;border-radius:8px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Listing Form </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+                  
