@@ -4,10 +4,7 @@
   "contractReserveToken": "smart_contract/reservetoken.sol",
   "contractEtherDeltaAddrs": [
     { "addr": "0xD7604dE847A18b6883266d775aD26b7cAc288B92", "info": "Deployed 21/01/2019 -- THE CURRENT SMART CONTRACT" },
-    { "addr": "0x373c55c277b866a69dc047cad488154ab9759466", "info": "Deployed 10/24/2016 -- OLD, DO NOT USE" },
-    { "addr": "0x4aea7cf559f67cedcad07e12ae6bc00f07e8cf65", "info": "Deployed 08/30/2016 -- OLD, DO NOT USE" },
-    { "addr": "0x2136bbba2edca21afdddee838fff19ea70d10f03", "info": "Deployed 08/03/2016 -- OLD, DO NOT USE" },
-    { "addr": "0xc6b330df38d6ef288c953f1f2835723531073ce2", "info": "Deployed 07/08/2016 -- OLD, DO NOT USE" }
+    { "addr": "0x373c55c277b866a69dc047cad488154ab9759466", "info": "Deployed 10/24/2016 -- OLD, DO NOT USE" }
   ],
   "ethTestnet": false,
   "ethChainId": 1,
@@ -21,7 +18,7 @@
   "gasTrade": 250000,
   "gasOrder": 250000,
   "minOrderSize": 0.001,
-  "socketServer": ["https://socket01.etherdelta.com","https://socket02.etherdelta.com","https://socket03.etherdelta.com","https://socket04.etherdelta.com","https://socket05.etherdelta.com","https://socket06.etherdelta.com"],
+  "socketServer": "https://api.pinexz.com",
   "userCookie": "EtherDelta",
   "eventsCacheCookie": "EtherDelta_eventsCache",
   "ordersCacheCookie": "EtherDelta_ordersCache",
